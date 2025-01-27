@@ -6,3 +6,30 @@ CREATE TABLE IF NOT EXISTS `city` (
    `updated_at` date DEFAULT NULL,
    `updated_by` varchar(20) DEFAULT NULL
 );
+
+
+CREATE TABLE IF NOT EXISTS `event` (
+    `event_id` int AUTO_INCREMENT PRIMARY KEY,
+    `title` varchar(255) NOT NULL,
+    `date` date NOT NULL,
+    `address` varchar(255) NOT NULL,
+    `location_url` varchar(255),
+    `location_type` varchar(10) NOT NULL DEFAULT 'Point',
+    `latitude` double NOT NULL,
+    `longitude` double NOT NULL,
+    `image` varchar(255) NOT NULL,
+    `description` text NOT NULL,
+    `organiser` varchar(255) NOT NULL,
+    `city` varchar(255),
+    `time` varchar(50),
+    `price` enum('Paid', 'Free'),
+    `category` enum('Art and Culture', 'Health and Wellness',
+                    'Entertainment', 'Sports',
+                    'Technology', 'Education',
+                    'Community & Environment', 'Career'),
+    `participants` json,
+    `created_at` date NOT NULL,
+    `created_by` varchar(20) NOT NULL,
+    `updated_at` date DEFAULT NULL,
+    `updated_by` varchar(20) DEFAULT NULL
+);
