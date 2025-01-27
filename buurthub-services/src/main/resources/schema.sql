@@ -50,3 +50,15 @@ CREATE TABLE IF NOT EXISTS `product` (
     `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     `updated_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 );
+
+
+CREATE TABLE IF NOT EXISTS `post` (
+    `post_id` INT AUTO_INCREMENT PRIMARY KEY,
+    `city` VARCHAR(255),
+    `title` VARCHAR(255),
+    `content` TEXT,
+    `post_author` VARCHAR(255),
+    `image` VARCHAR(255),
+    `contact_info` VARCHAR(255),
+    `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
