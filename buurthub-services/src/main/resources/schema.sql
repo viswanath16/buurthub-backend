@@ -33,3 +33,20 @@ CREATE TABLE IF NOT EXISTS `event` (
     `updated_at` date DEFAULT NULL,
     `updated_by` varchar(20) DEFAULT NULL
 );
+
+
+CREATE TABLE IF NOT EXISTS `product` (
+    `product_id` INT AUTO_INCREMENT PRIMARY KEY,
+    `city` VARCHAR(255) NOT NULL,
+    `product_name` VARCHAR(255) NOT NULL,
+    `price` DECIMAL(10, 2) NOT NULL,
+    `image` VARCHAR(255),
+    `description` TEXT,
+    `condition` VARCHAR(255),
+    `product_owner` VARCHAR(255),
+    `category` VARCHAR(255),
+    `reserved_by_id` VARCHAR(255),
+    `favourite_by_id` VARCHAR(255),
+    `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    `updated_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
